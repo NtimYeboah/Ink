@@ -4,7 +4,7 @@
   "description": "Tailwindcss theme for ntim.dev blog website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite"
   },
   "keywords": [],
   "author": "",
