@@ -19,19 +19,21 @@
             }
         </script>
     </head>
-    <body class="antialiased">
+    <body class="antialiased bg-white">
         <header class="py-2 border-b-2 bg-white dark:bg-gray-950">
-            <nav class="flex justify-between items-center">
-                <div><a href="/" class="font-mono font-bold dark:text-gray-400">ntim.dev</a></div>
-                <div>
+            <nav class="flex flex-row justify-between items-center">
+                <div class="basis-3/5 md:basis-2/4 lg:basis-2/4">
+                    <a href="/" class="font-mono font-bold dark:text-gray-400">ntim.dev</a>
+                </div>
+                <div class="hidden md:block basis-1/4 lg:basis-1/4">
                     <ul class="flex items-center gap-6">
                         <li><a href="/blog" class="font-sans font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Blog</a></li>
                         <li><a href="/projects" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Projects</a></li>
                         <li><a href="/about" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">About</a></li>
                     </ul>
                 </div>
-                <div>
-                    <ul class="flex items-center gap-8">
+                <div class="basis-1/5 md:basis-1/4 lg:basis-1/4">
+                    <ul class="flex justify-end items-center gap-8">
                         <li>
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold dark:text-gray-400">
@@ -73,13 +75,51 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="basis-1/5 md:hidden lg:hidden">
+                    <div class="flex justify-end">
+                        <svg id="sm-menu-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold dark:text-gray-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg id="sm-cancel-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden dark:text-gray-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                </div>
             </nav>
         </header>
-        <section id="primary-content"></div>
-        <section id="secondary-content"></div>
-        <section id="action"></div>
+        <section id="sm-menu" class="hidden bg-slate-100 rounded md:hidden lg:hidden 2xl:hidden">
+            <ul class="flex flex-col items-end gap-6">
+                <li><p><a href="/blog" class="font-sans font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-950">Blog</a></p></li>
+                <li><a href="/projects" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-950">Projects</a></li>
+                <li><a href="/about" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-950">About</a></li>
+            </ul>
+        </section>
+        <section id="primary-content"></section>
+        <section id="secondary-content"></section>
+        <section id="action"></section>
         <footer></footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        function onToggleMenuIcon(element) {
+            showMenu = element.id === 'sm-menu-icon' ? true : false;
+            element.classList.add('hidden')
+
+            menuForSmallScreens = document.querySelector('#sm-menu');
+
+            if (showMenu) {
+                cancelMenuIcon = document.querySelector('#sm-cancel-icon');
+                cancelMenuIcon.classList.remove('hidden')
+
+                menuForSmallScreens.classList.remove('hidden')
+            } else {
+                showMenuIcon = document.querySelector('#sm-menu-icon');
+                showMenuIcon.classList.remove('hidden')
+
+                menuForSmallScreens.classList.add('hidden')
+            }
+        }
+    </script>
     </body>
 </html>
