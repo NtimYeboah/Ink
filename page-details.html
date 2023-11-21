@@ -19,7 +19,7 @@
             }
         </script>
     </head>
-    <body class="antialiased bg-white dark:bg-cyan-950 scroll-smooth">
+    <body class="antialiased bg-white dark:bg-cyan-950 dark:text-gray-200 scroll-smooth">
         <header class="py-2 border-b-2 bg-white dark:bg-gray-950 dark:border-none">
             <nav class="flex flex-row justify-between items-center">
                 <div class="basis-3/5 md:basis-2/4 lg:basis-2/4">
@@ -88,6 +88,7 @@
                 </div>
             </nav>
         </header>
+
         <section id="sm-menu" class="hidden w-full z-50 absolute bg-slate-100 rounded md:hidden lg:hidden 2xl:hidden">
             <ul class="flex flex-col items-end gap-6">
                 <li><p><a href="/blog" class="font-sans font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-950">Blog</a></p></li>
@@ -95,40 +96,155 @@
                 <li><a href="/about" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-950">About</a></li>
             </ul>
         </section>
-        <section id="primary-content">
-            <header class="my-4">
-                <div class="flex justify-center">
-                    <h1 class="font-extrabold dark:text-slate-100">Latest blog posts</h1>
-                </div>
-            </header>
-            <div class="md:flex flex-row">
-                <article class="md:basis-1/2 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/page-details.html">
-                        <picture>
-                            <img class="rounded mb-2" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="">
-                        </picture>
-                        <h3 class="font-extrabold dark:text-slate-100">Stop mocking about: Event Dispatcher</h3>
-                        <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">PHPUNIT</h4>
-                        <p class="text-sm text-gray-600 dark:text-slate-400">How to replace your mocked event dispatcher with a real one, and why.</p>
-                    </a>
-                </article>
 
-                <article class="md:basis-1/2 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/blog/post-1">
-                        <picture>
-                            <img class="rounded mb-2" src="/assets/img/linked-lists-explained-in-php.jpg" alt="">
-                        </picture>
-                        <h3 class="font-extrabold dark:text-slate-100">Stop mocking about: Event Dispatcher</h3>
-                        <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">PHPUNIT</h4>
-                        <p class="text-sm text-gray-600 dark:text-slate-400">How to replace your mocked event dispatcher with a real one, and why.</p>
-                    </a>
-                </article>
+        <!-- Post header-->
+        <section>
+            <div class="flex flex-col items-center">
+                <p class="text-gray-500 m-5">November 21, 2023</p>
+                <h1 class="font-extrabold text-2xl m-5 dark:text-slate-100">Stop mocking about: Event Dispatcher</h1>
+                <div class="flex flex-row gap-5 m-5">
+                    <div class="bg-slate-200 p-2 dark:bg-cyan-900">
+                        <span class="dark:text-gray-200">PHPUNIT</span>
+                    </div>
+                    <div class="bg-slate-200 p-2 dark:bg-cyan-900">
+                        <span class="dark:text-gray-200">Stop Mocking About</span>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="secondary-content">
-            <div class="md:flex flex-row">
+        <!-- End of Post header-->
+
+        <!-- Main content -->
+        <section>
+            <!-- Main content container -->
+            <div class="flex flex-col px-5">
+                <picture>
+                    <img class="rounded-md" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="feature-image">
+                </picture>
+
+                <!-- Main conent -->
+                <div class="font-sans text-lg mt-5 dark:text-gray-200 font-medium">
+                    <p>
+                        I don't like mocks in unit testing (I use them, but don't like them).
+                        It often results in tests that only assure some specific method was called
+                        with certain parameters. It is this approach that may lead some to think
+                        that writing tests is writing the code twice, and therefore a waste of time.
+                        It also leaves a lot of room for errors, missing tests, or broken tests when
+                        the implementation is changed.
+                    </p>
+
+                    <p>
+                        That's why I wanted to make a miniseries on replacing mocks with real
+                        implementations by providing some semi-real-world examples.
+                    </p>
+
+                    <p>
+                        In this post we'll be looking into testing Event Dispatchers & Event Listeners.
+                        First we'll use mocks and check out some of their shortcomings.
+                        Then we'll rewrite to real implementations and see what makes them better.
+                    </p>
+
+                    <p>
+                        This test works, and it has full test coverage. But what are we actually testing here?
+                        Because we've mocked the EventDispatcherInterface, we need to tell the mock what to expect and return:
+                    </p>
+
+                    <p>
+                        It will receive exactly one call to dispatch with a GetTitleEvent that has The title as a value,
+                        and it needs to return that event; because we will call getTitle() on it.
+                    </p>
+
+                    <p>
+                        So we are mostly building a fake event dispatcher, and testing if it gets the correct parameters.
+                        Only then can we test the actual function of this test Importer::getPostTitle() and
+                        assert it returns the proper value.
+                    </p>
+                        
+                    <p>
+                        So more than half of this test is making sure the getPostTitle method calls some exact code;
+                        and sets up the world so that the actual test can be performed.
+                        And it doesn't even listen to the event, or change the title.
+                    </p>
+                </div>
+                <!-- Main content-->
+            </div>
+            <!-- End of main content container-->
+        </section>
+        <!-- End of main content -->
+
+        <!-- Share plugin -->
+        <section class="m-5 border-b-2 border-t-2 border-slate-200 py-9">
+            <div class="flex flex-col items-center space-y-5 text-slate-500">
+                <div>
+                    <h3 class="uppercase text-base font-bold dark:dark:text-gray-200">Share this article</h3>
+                </div>
+                <div>
+                    <div class="flex flex-row gap-8">
+                        <a href="" class="hover:text-slate-900 dark:hover:text-gray-200">
+                            <div class="flex flex-row gap-2">
+                                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
+                                </svg>
+                                <span>Twitter</span>
+                            </div>
+                        </a>
+
+                        <a href="" class="hover:text-slate-900 dark:hover:text-gray-200">
+                            <div class="flex flex-row gap-2">
+                                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"></path>
+                                </svg>
+                                <span>Facebook</span>
+                            </div>
+                        </a>
+
+                        <a href="" class="hover:text-slate-900 dark:hover:text-gray-200">
+                            <div class="flex flex-row gap-2">
+                                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
+                                </svg>
+                                <span>LinkedIn</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of share plugin -->
+
+        <!-- Comments section -->
+        <section class="giscus mt-5">
+        </section>
+        <!-- End of comments section-->
+
+        <!-- Newsletter section -->
+        <section id="action" class="bg-cyan-900 p-5 mt-5">
+            <div class="flex flex-col md:flex md:flex-row">
+                <div class="mb-5 md:basis-1/2">
+                    <h4 class="font-semibold text-xl text-slate-200">Want to know about future blog posts?</h4>
+                    <h4 class="font-semibold text-xl text-cyan-500">Then sign up for my newsletter!</h4>
+                </div>
+                <div class="mb-5 md:basis-1/2">
+                    <div>
+                        <input type="email" placeholder="Enter your email" class="w-3/4 p-2 rounded text-sm">
+                        <button class=" bg-sky-700 text-white p-2 rounded shadow-md text-sm">Notify Me</button>
+                    </div>
+                    <div class="mt-3">
+                        <p class="text-xs text-cyan-200">I'll only send mails if I actually have something to tell.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Newsletter section -->
+
+        <!-- Posts upselling -->
+        <section class="mt-5">
+            <div class="flex flex-col items-center">
+                <h1 class="font-extrabold text-2xl mb-5">You might find this interesting too</h1>
+            </div>
+            <div class="flex flex-col items-center md:flex md:flex-row">
                 <article class="md:basis-1/3 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/blog/post-1">
+                    <a href="/page-details.html">
                         <picture>
                             <img class="rounded mb-2" src="/assets/img/heaps-and-heapsort-in-php.jpg" alt="">
                         </picture>
@@ -139,7 +255,7 @@
                 </article>
 
                 <article class="md:basis-1/3 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/blog/post-1">
+                    <a href="/page-details.html">
                         <picture>
                             <img class="rounded mb-2" src="/assets/img/middleware-pattern-in-php.webp" alt="">
                         </picture>
@@ -161,101 +277,8 @@
                 </article>
             </div>
         </section>
-        <section id="tertiary-content" class="bg-slate-200 py-7 dark:bg-slate-900">
-            <div class="flex justify-center">
-                <h1 class="font-extrabold text-lg dark:text-slate-100">Quick tips & snippets</h1>
-            </div>
-            <div class="flex flex-col md:grid md:grid-cols-2">
-                <article class="py-7">
-                    <a href="#">
-                        <div class="flex flex-row">
-                            <div class="pt-1 w-1/12">
-                                <div class="flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:text-slate-100">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="w-11/12">
-                                <h3 class="font-bold dark:text-slate-100">Reading bundle configuration inside Symfony Compiler Passes</h3>
-                                <p class="dark:text-slate-400">How to inject bundle configuration into compiler passes in Symfony.</p>
-                            </div>
-                        </div>
-                    </a>
-                </article>
+        <!-- End of post upselling -->
 
-                <article class="py-7">
-                    <a href="#">
-                        <div class="flex flex-row">
-                            <div class="pt-1 w-1/12">
-                                <div class="flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:text-slate-100">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="w-11/12">
-                                <h3 class="font-bold dark:text-slate-100">Reading bundle configuration inside Symfony Compiler Passes</h3>
-                                <p class="dark:text-slate-400">How to inject bundle configuration into compiler passes in Symfony.</p>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="py-7">
-                    <a href="#">
-                        <div class="flex flex-row">
-                            <div class="pt-1 w-1/12">
-                                <div class="flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:text-slate-100">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="w-11/12">
-                                <h3 class="font-bold dark:text-slate-100">Reading bundle configuration inside Symfony Compiler Passes</h3>
-                                <p class="dark:text-slate-400">How to inject bundle configuration into compiler passes in Symfony.</p>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="py-7">
-                    <a href="#">
-                        <div class="flex flex-row">
-                            <div class="pt-1 w-1/12">
-                                <div class="flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:text-slate-100">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="w-11/12">
-                                <h3 class="font-bold dark:text-slate-100">Reading bundle configuration inside Symfony Compiler Passes</h3>
-                                <p class="dark:text-slate-400">How to inject bundle configuration into compiler passes in Symfony.</p>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-            </div>
-        </section>
-        <section id="action" class="bg-cyan-900 p-5">
-            <div class="flex flex-col md:flex md:flex-row">
-                <div class="mb-5 md:basis-1/2">
-                    <h4 class="font-semibold text-xl text-slate-200">Want to know about future blog posts?</h4>
-                    <h4 class="font-semibold text-xl text-cyan-500">Then sign up for my newsletter!</h4>
-                </div>
-                <div class="mb-5 md:basis-1/2">
-                    <div>
-                        <input type="email" placeholder="Enter your email" class="w-3/4 p-2 rounded text-sm">
-                        <button class=" bg-sky-700 text-white p-2 rounded shadow-md text-sm">Notify Me</button>
-                    </div>
-                    <div class="mt-3">
-                        <p class="text-xs text-cyan-200">I'll only send mails if I actually have something to tell.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
         <footer class="bg-black p-5">
             <div class="flex flex-row justify-start">
                 <div class="w-1/2">
@@ -304,6 +327,22 @@
                 menuForSmallScreens.classList.add('hidden')
             }
         }
+    </script>
+    <script src="https://giscus.app/client.js"
+        data-repo="NtimYeboah/ntim.dev"
+        data-repo-id="R_kgDOKwH1Gg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOKwH1Gs4CbHnQ"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
     </script>
     </body>
 </html>
