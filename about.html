@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ntim.dev</title>
+        <link href="/tailwind.css" rel="stylesheet">
+        <script>
+            // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
+            if (
+                localStorage.getItem('color-theme') === 'dark' ||
+                (!('color-theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches)
+            ) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        </script>
+    </head>
+    <body class="antialiased bg-white dark:bg-cyan-950 scroll-smooth">
+        <header class="py-2 border-b-2 bg-white dark:bg-gray-950 dark:border-none">
+            <nav class="flex flex-row justify-between items-center">
+                <div class="basis-3/5 md:basis-2/4 lg:basis-2/4">
+                    <a href="/" class="font-mono font-bold dark:text-gray-400">ntim.dev</a>
+                </div>
+                <div class="hidden md:block basis-1/4 lg:basis-1/4">
+                    <ul class="flex items-center gap-6">
+                        <li><a href="/blog" class="font-sans font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Blog</a></li>
+                        <li><a href="/projects" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Projects</a></li>
+                        <li><a href="/about" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">About</a></li>
+                    </ul>
+                </div>
+                <div class="basis-1/5 md:basis-1/4 lg:basis-1/4">
+                    <ul class="flex justify-end items-center gap-8">
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold dark:text-gray-400">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                  </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <button
+                                id="theme-toggle"
+                                type="button"
+                                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2"
+                            >
+                                <svg
+                                    id="theme-toggle-dark-icon"
+                                    class="w-5 h-5 hidden"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                                    ></path>
+                                </svg>
+                                <svg
+                                    id="theme-toggle-light-icon"
+                                    class="w-5 h-5 hidden"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="basis-1/5 md:hidden lg:hidden">
+                    <div class="flex justify-end">
+                        <svg
+                            id="sm-menu-icon"
+                            onClick="onToggleMenuIcon(this)"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" 
+                            stroke-width="1.5" 
+                            stroke="currentColor" 
+                            class="w-6 h-6 font-bold dark:text-gray-400"
+                        >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg
+                            id="sm-cancel-icon"
+                            onClick="onToggleMenuIcon(this)"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-6 h-6 hidden dark:text-gray-400"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="sm-menu" class="hidden w-full z-50 absolute bg-slate-100 rounded md:hidden lg:hidden 2xl:hidden">
+            <ul class="flex flex-col items-end gap-6">
+                <li><p><a href="/" class="font-sans font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-950">Blog</a></p></li>
+                <li><a href="/projects" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-950">Projects</a></li>
+                <li><a href="/about.html" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-950">About</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="flex flex-col items-center">
+                <div>
+                    <h1 class="text-2xl font-extrabold">About</h1>
+                </div>
+                <div>
+                    <h2 class="text-lg text-gray-500 font-semibold">Hi, please allow me to introduce myself</h2>
+                </div>
+                <div class="flex flex-col items-center md:flex md:flex-row md:gap-10">
+                    <div>
+                        <img class="object-cover object-top shadow-lg rounded-lg w-60 h-60 md:w-96 md:h-96" src="/assets/img/img.JPG" alt="" >
+                    </div>
+                    <div class="text-gray-500 font-medium">
+                        <p>
+                            I am a seasoned software developer with a passion for crafting elegant
+                            and effective solutions, I bring over 7 years of experience in building
+                            cutting-edge web applications using PHP.
+                        </p>
+                        <p>
+                            My expertise in PHP/Laravel is further solidified by my Laravel certification, earned in 2018.
+                        </p>
+                        <p>
+                            As a testament to my commitment to open-source contributions,
+                            I maintain a <a class="text-cyan-700" href="https://github.com/NtimYeboah/laravel-database-trigger">package that generates database trigger migration files for Laravel applications</a>.
+                        </p>
+                        <p>
+                            A creative thinker and problem solver, I take pride in ensuring that my solutions align
+                            with business objectives and deliver tangible value.
+                        </p>
+                        <p>
+                            Lastly I love cats.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter section -->
+        <section id="action" class="bg-cyan-900 p-5 mt-5">
+            <div class="flex flex-col md:flex md:flex-row">
+                <div class="mb-5 md:basis-1/2">
+                    <h4 class="font-semibold text-xl text-slate-200">Want to know about future blog posts?</h4>
+                    <h4 class="font-semibold text-xl text-cyan-500">Then sign up for my newsletter!</h4>
+                </div>
+                <div class="mb-5 md:basis-1/2">
+                    <div>
+                        <input type="email" placeholder="Enter your email" class="w-3/4 p-2 rounded text-sm">
+                        <button class=" bg-sky-700 text-white p-2 rounded shadow-md text-sm">Notify Me</button>
+                    </div>
+                    <div class="mt-3">
+                        <p class="text-xs text-cyan-200">I'll only send mails if I actually have something to tell.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Newsletter section -->
+
+        <footer class="bg-black p-5">
+            <div class="flex flex-row justify-start">
+                <div class="w-1/2">
+                    <p class="text-slate-400 text-sm">&copy; 2023 <a href="/">ntim.dev</a></p>
+                </div>
+                <div class="w-1/2">
+                    <ul class="flex justify-between">
+                        <li>
+                            <a href="/blog" class="font-sans text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/projects" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Projects</a>
+                        </li>
+                        <li>
+                            <a href="/about" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">About</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NtimYeboah" target="_blank" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">
+                                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function onToggleMenuIcon(element) {
+            showMenu = element.id === 'sm-menu-icon' ? true : false;
+            element.classList.add('hidden')
+
+            menuForSmallScreens = document.querySelector('#sm-menu');
+
+            if (showMenu) {
+                cancelMenuIcon = document.querySelector('#sm-cancel-icon');
+                cancelMenuIcon.classList.remove('hidden')
+
+                menuForSmallScreens.classList.remove('hidden')
+            } else {
+                showMenuIcon = document.querySelector('#sm-menu-icon');
+                showMenuIcon.classList.remove('hidden')
+
+                menuForSmallScreens.classList.add('hidden')
+            }
+        }
+    </script>
+    </body>
+</html>
