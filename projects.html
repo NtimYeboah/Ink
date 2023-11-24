@@ -100,19 +100,19 @@
             </ul>
         </section>
 
-        <section>
-            <div class="flex flex-col items-center">
+        <section class="md:w-3/4 md:mx-auto">
+            <div class="flex flex-col items-center space-y-10">
                 <div>
-                    <h1 class="text-2xl font-extrabold dark:text-slate-100">Projects</h1>
+                    <h1 class="text-2xl font-extrabold dark:text-slate-100 mt-5">Projects</h1>
                 </div>
-                <div>
-                    <h2 class="text-lg text-gray-500 font-semibold">
+                <div class="px-6">
+                    <h2 class="text-lg text-gray-800 font-semibold">
                         I'm always working on projects and packages to make your life easier.<br>
                         Most of them are open-source, so you don't have to pay a dime!
                     </h2>
                 </div>
                 <div>
-                    <div class="flex flex-col md:grid md:grid-cols-3">
+                    <div class="flex flex-col md:grid md:grid-cols-3 sm:grid sm:grid-cols-2">
                         <article class="p-5 hover:bg-slate-100 dark:hover:bg-slate-900">
                             <a href="https://github.com/NtimYeboah/laravel-database-trigger">
                                 <picture class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
@@ -127,7 +127,7 @@
                                         alt="">
                                 </picture>
                                 <h1 class="font-extrabold text-gray-800 dark:text-slate-100">Laravel Database Trigger</h1>
-                                <p class="dark:text-slate-400">
+                                <p class="dark:text-slate-400 text-gray-700">
                                     Laravel Database Trigger provides a way to add database trigger to laravel migrations
                                     just like you would with database table. A trigger is a named database object that is
                                     associated with a table, and that activates when a particular event occurs for the table.
@@ -155,7 +155,7 @@
                                         alt="">
                                 </picture>
                                 <h1 class="font-extrabold text-gray-800 dark:text-slate-100">Laravel Database Trigger</h1>
-                                <p class="dark:text-slate-400">
+                                <p class="dark:text-slate-400 text-gray-700">
                                     Laravel Database Trigger provides a way to add database trigger to laravel migrations
                                     just like you would with database table. A trigger is a named database object that is
                                     associated with a table, and that activates when a particular event occurs for the table.
@@ -183,7 +183,7 @@
                                         alt="">
                                 </picture>
                                 <h1 class="font-extrabold text-gray-800 dark:text-slate-100">Laravel Database Trigger</h1>
-                                <p class="dark:text-slate-400">
+                                <p class="dark:text-slate-400 text-gray-700">
                                     Laravel Database Trigger provides a way to add database trigger to laravel migrations
                                     just like you would with database table. A trigger is a named database object that is
                                     associated with a table, and that activates when a particular event occurs for the table.
@@ -211,7 +211,7 @@
                                         alt="">
                                 </picture>
                                 <h1 class="font-extrabold text-gray-800 dark:text-slate-100">Laravel Database Trigger</h1>
-                                <p class="dark:text-slate-400">
+                                <p class="dark:text-slate-400 text-gray-700">
                                     Laravel Database Trigger provides a way to add database trigger to laravel migrations
                                     just like you would with database table. A trigger is a named database object that is
                                     associated with a table, and that activates when a particular event occurs for the table.
@@ -229,13 +229,31 @@
             </div>
         </section>
 
+        <section id="action" class="bg-cyan-900 p-5 mt-10">
+            <div class="md:w-11/12 md:mx-auto flex flex-col md:flex md:flex-row md:gap-3">
+                <div class="mb-5 md:basis-1/2">
+                    <h4 class="font-semibold text-xl text-slate-200">Want to know about future blog posts?</h4>
+                    <h4 class="font-semibold text-xl text-cyan-500">Then sign up for my newsletter!</h4>
+                </div>
+                <div class="mb-5 md:basis-1/2">
+                    <div>
+                        <input type="email" placeholder="Enter your email" class="w-3/4 p-2 rounded text-sm">
+                        <button class=" bg-sky-700 text-white p-2 rounded shadow-md text-sm">Notify Me</button>
+                    </div>
+                    <div class="mt-3">
+                        <p class="text-xs text-cyan-200">I'll only send mails if I actually have something to tell.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer class="bg-black p-5">
             <div class="flex flex-row justify-start">
-                <div class="w-1/2">
+                <div class="w-2/6 md:w-4/6">
                     <p class="text-slate-400 text-sm">&copy; 2023 <a href="/">ntim.dev</a></p>
                 </div>
-                <div class="w-1/2">
-                    <ul class="flex justify-between">
+                <div class="w-2/6 md:w-1/3">
+                    <ul class="flex justify-between gap-3">
                         <li>
                             <a href="/blog" class="font-sans text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Blog</a>
                         </li>
@@ -245,13 +263,17 @@
                         <li>
                             <a href="/about" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">About</a>
                         </li>
+                    </ul>
+                </div>
+                <div class="w-2/6 md:w-1/6">
+                    <ul class="flex flex-row justify-end gap-6 md:gap-12">
                         <li>
                             <a href="https://twitter.com/ntimdev" target="_blank" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">
                                 <svg
                                     fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
+                                    width="20"
+                                    height="20"
                                     viewBox="0 0 24 24"
                                 >
                                     <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
