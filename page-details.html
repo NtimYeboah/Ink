@@ -101,7 +101,7 @@
         </section>
 
         <!-- Post header-->
-        <section>
+        <section class="md:w-3/4 md:mx-auto">
             <div class="flex flex-col items-center">
                 <p class="text-gray-500 m-5">November 21, 2023</p>
                 <h1 class="font-extrabold text-2xl m-5 dark:text-slate-100">Stop mocking about: Event Dispatcher</h1>
@@ -118,11 +118,11 @@
         <!-- End of Post header-->
 
         <!-- Main content -->
-        <section>
+        <section class="md:w-3/4 md:mx-auto">
             <!-- Main content container -->
             <div class="flex flex-col px-5">
                 <picture>
-                    <img class="rounded-md" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="feature-image">
+                    <img class="rounded-md w-full md:h-96 object-cover object-center" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="feature-image">
                 </picture>
 
                 <!-- Main conent -->
@@ -176,7 +176,7 @@
         <!-- End of main content -->
 
         <!-- Share plugin -->
-        <section class="m-5 border-b-2 border-t-2 border-slate-200 py-9">
+        <section class="md:w-3/4 md:mx-auto m-5 border-b-2 border-t-2 border-slate-200 py-9">
             <div class="flex flex-col items-center space-y-5 text-slate-500">
                 <div>
                     <h3 class="uppercase text-base font-bold dark:dark:text-gray-200">Share this article</h3>
@@ -216,13 +216,13 @@
         <!-- End of share plugin -->
 
         <!-- Comments section -->
-        <section class="giscus mt-5">
+        <section class="md:w-3/4 md:mx-auto giscus mt-5 px-4 md:px-0">
         </section>
         <!-- End of comments section-->
 
         <!-- Newsletter section -->
         <section id="action" class="bg-cyan-900 p-5 mt-5">
-            <div class="flex flex-col md:flex md:flex-row">
+            <div class="md:w-11/12 md:mx-auto flex flex-col md:flex md:flex-row md:gap-3">
                 <div class="mb-5 md:basis-1/2">
                     <h4 class="font-semibold text-xl text-slate-200">Want to know about future blog posts?</h4>
                     <h4 class="font-semibold text-xl text-cyan-500">Then sign up for my newsletter!</h4>
@@ -241,7 +241,7 @@
         <!-- End of Newsletter section -->
 
         <!-- Posts upselling -->
-        <section class="mt-5">
+        <section class="md:w-3/4 md:mx-auto mt-5">
             <div class="flex flex-col items-center">
                 <h1 class="font-extrabold text-2xl mb-5">You might find this interesting too</h1>
             </div>
@@ -249,7 +249,7 @@
                 <article class="md:basis-1/3 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
                     <a href="/page-details.html">
                         <picture>
-                            <img class="rounded mb-2" src="/assets/img/heaps-and-heapsort-in-php.jpg" alt="">
+                            <img class="w-full md:h-44 h-64 object-cover object-center rounded mb-2" src="/assets/img/heaps-and-heapsort-in-php.jpg" alt="">
                         </picture>
                         <h3 class="font-extrabold dark:text-slate-100">Stop mocking about: Event Dispatcher</h3>
                         <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">PHPUNIT</h4>
@@ -260,7 +260,7 @@
                 <article class="md:basis-1/3 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
                     <a href="/page-details.html">
                         <picture>
-                            <img class="rounded mb-2" src="/assets/img/middleware-pattern-in-php.webp" alt="">
+                            <img class="w-full md:h-44 h-64 object-cover object-center rounded mb-2" src="/assets/img/middleware-pattern-in-php.webp" alt="">
                         </picture>
                         <h3 class="font-extrabold dark:text-slate-100">Stop mocking about: Event Dispatcher</h3>
                         <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">PHPUNIT</h4>
@@ -271,7 +271,7 @@
                 <article class="md:basis-1/3 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
                     <a href="/blog/post-1">
                         <picture>
-                            <img class="rounded mb-2" src="/assets/img/visitor-pattern.jpg" alt="">
+                            <img class="w-full md:h-44 h-64 object-cover object-center rounded mb-2" src="/assets/img/visitor-pattern.jpg" alt="">
                         </picture>
                         <h3 class="font-extrabold dark:text-slate-100">Stop mocking about: Event Dispatcher</h3>
                         <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">PHPUNIT</h4>
@@ -284,11 +284,11 @@
 
         <footer class="bg-black p-5">
             <div class="flex flex-row justify-start">
-                <div class="w-1/2">
+                <div class="w-2/6 md:w-4/6">
                     <p class="text-slate-400 text-sm">&copy; 2023 <a href="/">ntim.dev</a></p>
                 </div>
-                <div class="w-1/2">
-                    <ul class="flex justify-between">
+                <div class="w-2/6 md:w-1/3">
+                    <ul class="flex justify-between gap-3">
                         <li>
                             <a href="/blog" class="font-sans text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Blog</a>
                         </li>
@@ -298,13 +298,17 @@
                         <li>
                             <a href="/about" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">About</a>
                         </li>
+                    </ul>
+                </div>
+                <div class="w-2/6 md:w-1/6">
+                    <ul class="flex flex-row justify-end gap-6 md:gap-12">
                         <li>
                             <a href="https://twitter.com/ntimdev" target="_blank" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">
                                 <svg
                                     fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
+                                    width="20"
+                                    height="20"
                                     viewBox="0 0 24 24"
                                 >
                                     <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
