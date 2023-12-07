@@ -19,297 +19,397 @@
             }
         </script>
     </head>
-    <body class="antialiased bg-white dark:bg-cyan-950 scroll-smooth">
-        <header class="py-2 border-b bg-white dark:bg-gray-950 dark:border-none">
-            <nav class="w-4/6 flex flex-row justify-between items-center mx-auto">
-                <div class="basis-4/5 md:basis-3/5 lg:basis-5/6">
-                    <a href="/" class="font-mono font-bold dark:text-gray-400">ntim.dev</a>
-                </div>
-                <div class="hidden md:block md:basis-1/5 basis-1/4 lg:basis-1/6">
-                    <ul class="flex items-center gap-6">
-                        <li><a href="/blog" class="font-sans font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Blog</a></li>
-                        <li><a href="/projects" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Projects</a></li>
-                        <li><a href="/about" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">About</a></li>
-                    </ul>
-                </div>
-                <div class="basis-1/5 pr-3 md:pr-0 border-r md:border-r-0 dark:border-r-gray-400 md:basis-1/5 lg:basis-1/6 ">
-                    <ul class="flex justify-end items-center gap-8">
-                        <li>
-                            <button
-                                id="search-icon"
-                                type="button"
-                                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold dark:text-gray-400">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                                  </svg>
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="theme-toggle"
-                                type="button"
-                                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2"
-                            >
-                                <svg
-                                    id="theme-toggle-dark-icon"
-                                    class="w-5 h-5 hidden"
-                                    fill="currentColor"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
+    <body class="antialiased bg-white scroll-smooth">
+        <header class="py-4 bg-white">
+            <div class="container pl-4 pr-4 sm:pl-4 sm:pr-4 md:mx-auto">
+                <div class="md:w-8/12 md:mx-auto flex flex-row justify-between items-center">
+                    <div class="basis-4/5 md:basis-4/12">
+                        <a href="/" class="font-sarabun text-lg font-extrabold dark:text-gray-400">ntim.dev</a>
+                    </div>
+                    <nav class="hidden md:block md:basis-4/12 basis-1/4">
+                        <ul class="flex justify-center gap-12">
+                            <li><a href="/blog" class="font-saira text-xl font-semibold py-1 hover:border-b-2 border-gray-600 dark:text-gray-400">Blog</a></li>
+                            <li><a href="/projects" class="font-saira text-xl font-semibold py-1 hover:border-b-2 border-gray-600 dark:text-gray-400">Projects</a></li>
+                            <li><a href="/about" class="font-saira text-xl font-semibold py-1 hover:border-b-2 border-gray-600 dark:text-gray-400">About</a></li>
+                        </ul>
+                    </nav>
+                    <div class="basis-1/5 md:basis-4/12 pr-3 md:pr-0 border-r md:border-r-0 dark:border-r-gray-400">
+                        <ul class="flex justify-end items-center gap-8">
+                            <li>
+                                <button
+                                    id="theme-toggle"
+                                    type="button"
+                                    class="text-gray-600 dark:text-gray-400 hover:bg-slate-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2"
                                 >
-                                    <path
-                                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                                    ></path>
-                                </svg>
-                                <svg
-                                    id="theme-toggle-light-icon"
-                                    class="w-5 h-5 hidden"
-                                    fill="currentColor"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                                    fill-rule="evenodd"
-                                    clip-rule="evenodd"
-                                    ></path>
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="basis-1/12 md:hidden lg:hidden">
-                    <div class="flex justify-end">
-                        <svg id="sm-menu-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold dark:text-gray-400">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                        <svg id="sm-cancel-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden dark:text-gray-400">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                                    <svg
+                                        id="theme-toggle-dark-icon"
+                                        class="w-5 h-5 hidden"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        id="theme-toggle-light-icon"
+                                        class="w-5 h-5 hidden"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="basis-1/12 md:hidden lg:hidden">
+                        <div class="flex justify-end">
+                            <svg id="sm-menu-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold dark:text-gray-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <svg id="sm-cancel-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden dark:text-gray-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
-            </nav>
+            </div>
         </header>
-        <section id="sm-menu" class="hidden w-full shadow-sm z-50 absolute bg-slate-100 md:hidden lg:hidden 2xl:hidden dark:bg-cyan-950">
+        <!-- Menu for SM and below devices -->
+        <section id="sm-menu" class="hidden w-full shadow-sm z-50 absolute bg-white md:hidden lg:hidden 2xl:hidden dark:bg-cyan-950">
             <ul class="flex flex-col items-end">
-                <li class="py-2 border-b dark:border-b-gray-400 w-full"><p class="float-right pr-5"><a href="/" class="font-sans font-bold py-4 border-gray-300 dark:text-slate-100">Blog</a></p></li>
-                <li class="py-2 w-full"><p class="float-right pr-5"><a href="/projects" class="font-bold py-4 border-gray-300 dark:text-slate-100">Projects</a></p></li>
-                <li class="py-2 border-t dark:border-t-gray-400 w-full"><p class="float-right pr-5"><a href="/about.html" class="font-bold py-4 border-gray-300 dark:text-slate-100">About</a></p></li>
+                <li class="py-2 border-b dark:border-b-gray-400 w-full"><a href="/" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-slate-100">Blog</a></li>
+                <li class="py-2 w-full"><a href="/projects" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-slate-100">Projects</a></p></li>
+                <li class="py-2 border-t dark:border-t-gray-400 w-full"><a href="/about.html" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-slate-100">About</a></p></li>
             </ul>
         </section>
-        <section class="md:w-6/12 md:mx-auto" id="primary-content">
-            <header class="my-4">
-                <div class="flex justify-center">
-                    <h1 class="font-extrabold dark:text-slate-100">Latest posts</h1>
-                </div>
-            </header>
-            <div class="md:flex md:flex-row">
-                <article class="md:basis-1/2 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/page-details.html">
-                        <picture>
-                            <img class="w-full h-64 object-cover object-center rounded mb-2" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="">
-                        </picture>
-                        <h3 class="font-extrabold dark:text-slate-100">What is Lorem Ipsum?</h3>
-                        <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">DUMMY</h4>
-                        <p class="text-sm text-gray-600 dark:text-slate-400 line-clamp-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </a>
-                </article>
+        <!-- End of menu for SM and below devices -->
 
-                <article class="md:basis-1/2 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/blog/post-1">
-                        <picture>
-                            <img class="w-full h-64 object-cover object-center rounded mb-2" src="/assets/img/linked-lists-explained-in-php.jpg" alt="">
-                        </picture>
-                        <h3 class="font-extrabold dark:text-slate-100">Why do we use it?</h3>
-                        <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">DUMMY</h4>
-                        <p class="text-sm text-gray-600 dark:text-slate-400">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
-                    </a>
-                </article>
-            </div>
-        </section>
-        <section class="md:w-6/12 md:mx-auto" id="secondary-content">
-            <div class="md:flex flex-row">
-                <article class="md:basis-1/3 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/blog/post-1">
-                        <picture>
-                            <img class="w-full md:h-44 h-64 object-cover object-center rounded mb-2" src="/assets/img/heaps-and-heapsort-in-php.jpg" alt="">
-                        </picture>
-                        <h3 class="font-extrabold dark:text-slate-100">Where does it come from</h3>
-                        <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">DUMMY</h4>
-                        <p class="text-sm text-gray-600 dark:text-slate-400 line-clamp-3">Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                    </a>
-                </article>
-
-                <article class="md:basis-1/3 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/blog/post-1">
-                        <picture>
-                            <img class="w-full md:h-44 h-64 object-cover object-center rounded mb-2" src="/assets/img/middleware-pattern-in-php.webp" alt="">
-                        </picture>
-                        <h3 class="font-extrabold dark:text-slate-100">Where can I get some?</h3>
-                        <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">DUMMY</h4>
-                        <p class="text-sm text-gray-600 dark:text-slate-400 line-clamp-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                    </a>
-                </article>
-
-                <article class="md:basis-1/3 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/blog/post-1">
-                        <picture>
-                            <img class="w-full md:h-44 h-64 object-cover object-center rounded mb-2" src="/assets/img/visitor-pattern.jpg" alt="">
-                        </picture>
-                        <h3 class="font-extrabold dark:text-slate-100">The standard Lorem Ipsum passage, used since the 1500s</h3>
-                        <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">DUMMY</h4>
-                        <p class="text-sm text-gray-600 dark:text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </a>
-                </article>
-            </div>
-        </section>
-        <section id="tertiary-content" class="bg-slate-200 py-7 dark:bg-slate-900">
-            <div class="md:w-6/12 md:mx-auto">
-                <div class="flex justify-center">
-                    <h1 class="font-extrabold text-lg dark:text-slate-100">Quick tips & snippets</h1>
-                </div>
-                <div class="flex flex-col md:grid md:grid-cols-2">
-                    <article class="py-7">
-                        <a href="#">
-                            <div class="flex flex-row">
-                                <div class="pt-1 w-1/12">
-                                    <div class="flex justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:text-slate-100">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="w-11/12">
-                                    <h3 class="font-bold dark:text-slate-100 mb-2">Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
-                                    <p class="dark:text-slate-400 line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                </div>
+        <div class="container sm:pl-4 sm:pr-4 md:mx-auto mt-5">
+            <section id="primary-content" class="md:w-7/12 md:mx-auto flex flex-col">
+                <!-- Lastest posts container -->
+                <div class="flex flex-col bg-slate-50">
+                    <!-- Text container -->
+                    <div class="flex flex-row gap-3">
+                        <div>
+                            <div class="h-5 my-3 border-l-2 border-l-rose-500">
                             </div>
-                        </a>
-                    </article>
-
-                    <article class="py-7">
-                        <a href="#">
-                            <div class="flex flex-row">
-                                <div class="pt-1 w-1/12">
-                                    <div class="flex justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:text-slate-100">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="w-11/12">
-                                    <h3 class="font-bold dark:text-slate-100 mb-2">1914 translation by H. Rackham</h3>
-                                    <p class="dark:text-slate-400 line-clamp-2">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
-                                </div>
+                        </div>
+                        <div>
+                            <div class="h-5 mt-2">
+                                <h2 class="font-saira font-bold text-xl">Latest Posts</h2>
                             </div>
-                        </a>
-                    </article>
-
-                    <article class="py-7">
-                        <a href="#">
-                            <div class="flex flex-row">
-                                <div class="pt-1 w-1/12">
-                                    <div class="flex justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:text-slate-100">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="w-11/12">
-                                    <h3 class="font-bold dark:text-slate-100 mb-2">Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-                                    </h3>
-                                    <p class="dark:text-slate-400 line-clamp-2">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="py-7">
-                        <a href="#">
-                            <div class="flex flex-row">
-                                <div class="pt-1 w-1/12">
-                                    <div class="flex justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:text-slate-100">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="w-11/12">
-                                    <h3 class="font-bold dark:text-slate-100 mb-2">1914 translation by H. Rackham</h3>
-                                    <p class="dark:text-slate-400 line-clamp-2">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <section id="action" class="bg-cyan-900 p-5">
-            <div class="md:w-9/12 md:mx-auto flex flex-col md:flex md:flex-row md:gap-3">
-                <div class="mb-5 md:basis-1/2">
-                    <h4 class="font-semibold text-xl text-slate-200">Want to know about future blog posts?</h4>
-                    <h4 class="font-semibold text-xl text-cyan-500">Then sign up for my newsletter!</h4>
-                </div>
-                <div class="mb-5 md:basis-1/2">
-                    <div>
-                        <input type="email" placeholder="Enter your email" class="w-3/4 p-2 rounded text-sm">
-                        <button class=" bg-sky-700 text-white p-2 rounded shadow-md text-sm">Notify Me</button>
+                        </div>
                     </div>
-                    <div class="mt-3">
-                        <p class="text-xs text-cyan-200">I'll only send mails if I actually have something to tell.</p>
+                    <!-- End of Text container -->
+
+                    <!-- Article container -->
+                    <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 mx-4 mb-4">
+                        <article class="hover:bg-slate-100">
+                            <a href="/page-details.html" class="">
+                                <div class="flex-col">
+                                    <picture>
+                                        <img class="w-full h-48 object-cover object-center mb-2" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="">
+                                    </picture>
+                                </div>
+                                <div class="flex flex-col px-4">
+                                    <div class="flex flex-col">
+                                        <h3 class="font-sarabun font-extrabold text-lg text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+    
+                                        <p class="text-base text-gray-900 line-clamp-4 mt-5">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-row p-5 gap-6 justify-center">
+                                        <div>
+                                            <p class="inline-flex gap-1">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24" 
+                                                    fill="currentColor" 
+                                                    class="w-5 h-5 text-gray-500"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd" 
+                                                        d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h15a3 3 0 01-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                    <path
+                                                        d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 01-3 0V6.75z"
+                                                    />
+                                                </svg>
+                                                <span class="text-sm font-normal text-gray-600">PHPUNIT</span>  
+                                            </p>
+                                        </div>
+    
+                                        <div>
+                                            <p class="inline-flex gap-1">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="w-5 h-5 text-gray-500"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                                <span class="text-sm font-normal text-gray-600">4.12.2023</span>  
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="hover:bg-slate-100">
+                            <a href="/page-details.html" class="">
+                                <div class="flex-col">
+                                    <picture>
+                                        <img class="w-full h-48 object-cover object-center mb-2" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="">
+                                    </picture>
+                                </div>
+                                <div class="flex flex-col px-4">
+                                    <div class="flex flex-col">
+                                        <h3 class="font-sarabun font-extrabold text-lg text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+    
+                                        <p class="text-base text-gray-900 line-clamp-4 mt-5">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-row p-5 gap-6 justify-center">
+                                        <div>
+                                            <p class="inline-flex gap-1">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="w-5 h-5 text-gray-500"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd" 
+                                                        d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h15a3 3 0 01-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                    <path
+                                                        d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 01-3 0V6.75z"
+                                                    />
+                                                </svg>
+                                                <span class="text-sm font-normal text-gray-600">PHPUNIT</span>
+                                            </p>
+                                        </div>
+    
+                                        <div>
+                                            <p class="inline-flex gap-1">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="w-5 h-5 text-gray-500"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                                <span class="text-sm font-normal text-gray-600">4.12.2023</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
                     </div>
                 </div>
-            </div>
-        </section>
+                <!-- End of Latest posts container -->
+            </section>
+        </div>
+
+        <div class="container px-4 mb-10 md:mx-auto my-5">
+            <section id="tips-and-snippets" class="md:w-7/12 md:mx-auto flex flex-col">
+                <!--  Tips container -->
+                <div class="bg-slate-50">
+                    <!-- Text container -->
+                    <div class="flex flex-row gap-3">
+                        <div class="">
+                            <div class="h-5 my-3 border-l-2 border-l-rose-500">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="h-5 mt-2">
+                                <h2 class="font-saira font-bold text-xl">Tips & Snippets</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Text Container -->
+
+                    <!-- Article container -->
+                    <div class="flex flex-col md:grid md:grid-cols-2 pb-5 pr-5">
+                        <article class="mb-5">
+                            <a href="#">
+                                <div class="flex flex-row">
+                                    <div class="pt-1 w-1/12">
+                                        <div class="flex justify-center">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="w-5 h-5">
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd"
+                                                />
+                                              </svg>
+                                        </div>
+                                    </div>
+                                    <div class="w-11/12">
+                                        <h3 class="font-sarabun font-bold mb-2">Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
+                                        <p class="line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="mb-5">
+                            <a href="#">
+                                <div class="flex flex-row">
+                                    <div class="pt-1 w-1/12">
+                                        <div class="flex justify-center">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="w-5 h-5">
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd"
+                                                />
+                                              </svg>
+                                        </div>
+                                    </div>
+                                    <div class="w-11/12">
+                                        <h3 class="font-sarabun font-bold mb-2">Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
+                                        <p class="line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="mb-5">
+                            <a href="#">
+                                <div class="flex flex-row">
+                                    <div class="pt-1 w-1/12">
+                                        <div class="flex justify-center">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="w-5 h-5">
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd"
+                                                />
+                                              </svg>
+                                        </div>
+                                    </div>
+                                    <div class="w-11/12">
+                                        <h3 class="font-sarabun font-bold mb-2">Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
+                                        <p class="line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="mb-5">
+                            <a href="#">
+                                <div class="flex flex-row">
+                                    <div class="pt-1 w-1/12">
+                                        <div class="flex justify-center">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="w-5 h-5">
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd"
+                                                />
+                                              </svg>
+                                        </div>
+                                    </div>
+                                    <div class="w-11/12">
+                                        <h3 class="font-sarabun font-bold mb-2">Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
+                                        <p class="line-clamp-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
         <footer class="bg-black p-5">
-            <div class="flex flex-row justify-start">
-                <div class="w-2/6 md:w-4/6">
-                    <p class="text-slate-400 text-sm">&copy; 2023 <a href="/">ntim.dev</a></p>
-                </div>
-                <div class="w-2/6 md:w-1/6">
-                    <ul class="flex justify-between gap-3 md:gap-0">
-                        <li>
-                            <a href="/blog" class="font-sans text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Blog</a>
-                        </li>
-                        <li>
-                            <a href="/projects" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Projects</a>
-                        </li>
-                        <li>
-                            <a href="/about" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">About</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="w-2/6 md:w-1/6">
-                    <ul class="flex flex-row justify-end gap-6 md:gap-12">
-                        <li>
-                            <a href="https://twitter.com/ntimdev" target="_blank" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">
-                                <svg
-                                    fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/NtimYeboah" target="_blank" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">
-                                <svg
-                                    fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                >
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+            <div class="container pl-4 pr-4 sm:pl-4 sm:pr-4 md:mx-auto">
+                <div class="flex flex-row justify-start">
+                    <div class="w-2/6 md:w-4/6">
+                        <p class="text-slate-400 text-sm font-sarabun">&copy; 2023 <a href="/">ntim.dev</a></p>
+                    </div>
+                    <div class="w-2/6 md:w-1/6">
+                        <ul class="flex justify-between gap-3 md:gap-0">
+                            <li><a href="/blog" class="font-saira font-semibold text-slate-400 py-4 dark:text-gray-400">Blog</a></li>
+                            <li><a href="/projects" class="font-saira font-semibold text-slate-400 py-4 dark:text-gray-400">Projects</a></li>
+                            <li><a href="/about" class="font-saira font-semibold text-slate-400 py-4 dark:text-gray-400">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-2/6 md:w-1/6">
+                        <ul class="flex flex-row justify-end gap-6 md:gap-12">
+                            <li>
+                                <a href="https://twitter.com/ntimdev" target="_blank" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">
+                                    <svg
+                                        fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/NtimYeboah" target="_blank" class="text-slate-400 font-medium py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">
+                                    <svg
+                                        fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                    >
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                            />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>

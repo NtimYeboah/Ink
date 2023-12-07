@@ -4,7 +4,8 @@
   "description": "Tailwindcss theme for ntim.dev blog website",
   "main": "index.js",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "npx tailwindcss -i ./tailwind.css -o assets/css/style.css"
   },
   "keywords": [],
   "author": "",
