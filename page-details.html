@@ -19,114 +19,110 @@
             }
         </script>
     </head>
-    <body class="antialiased bg-white dark:bg-cyan-950 dark:text-gray-200 scroll-smooth">
-        <header class="py-2 border-b bg-white dark:bg-gray-950 dark:border-none">
-            <nav class="w-4/6 flex flex-row justify-between items-center mx-auto">
-                <div class="basis-4/5 md:basis-3/5 lg:basis-5/6">
-                    <a href="/" class="font-mono font-bold dark:text-gray-400">ntim.dev</a>
-                </div>
-                <div class="hidden md:block md:basis-1/5 basis-1/4 lg:basis-1/6">
-                    <ul class="flex items-center gap-6">
-                        <li><a href="/blog" class="font-sans font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Blog</a></li>
-                        <li><a href="/projects" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">Projects</a></li>
-                        <li><a href="/about" class="font-bold py-4 hover:border-b-4 border-gray-300 dark:text-gray-400">About</a></li>
-                    </ul>
-                </div>
-                <div class="basis-1/5 pr-3 md:pr-0 border-r md:border-r-0 dark:border-r-gray-400 md:basis-1/5 lg:basis-1/6 ">
-                    <ul class="flex justify-end items-center gap-8">
-                        <li>
-                            <button
-                                id="search-icon"
-                                type="button"
-                                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold dark:text-gray-400">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                                  </svg>
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="theme-toggle"
-                                type="button"
-                                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2"
-                            >
-                                <svg
-                                    id="theme-toggle-dark-icon"
-                                    class="w-5 h-5 hidden"
-                                    fill="currentColor"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                                    ></path>
-                                </svg>
-                                <svg
-                                    id="theme-toggle-light-icon"
-                                    class="w-5 h-5 hidden"
-                                    fill="currentColor"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                                    fill-rule="evenodd"
-                                    clip-rule="evenodd"
-                                    ></path>
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="basis-1/12 md:hidden lg:hidden">
-                    <div class="flex justify-end">
-                        <svg id="sm-menu-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold dark:text-gray-400">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                        <svg id="sm-cancel-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden dark:text-gray-400">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+    <body class="antialiased bg-white dark:bg-baccara scroll-smooth">
+        <header class="py-4">
+            <div class="container pl-4 pr-4 sm:pl-4 sm:pr-4 md:mx-auto">
+                <div class="md:w-8/12 md:mx-auto flex flex-row justify-between items-center">
+                    <div class="basis-4/5 md:basis-4/12">
+                        <a href="/" class="font-sarabun text-lg font-extrabold dark:text-gray-400">ntim.dev</a>
                     </div>
-                </div>
-            </nav>
-        </header>
-        <section id="sm-menu" class="hidden w-full shadow-sm z-50 absolute bg-slate-100 md:hidden lg:hidden 2xl:hidden dark:bg-cyan-950">
-            <ul class="flex flex-col items-end">
-                <li class="py-2 border-b dark:border-b-gray-400 w-full"><p class="float-right pr-5"><a href="/" class="font-sans font-bold py-4 border-gray-300 dark:text-slate-100">Blog</a></p></li>
-                <li class="py-2 w-full"><p class="float-right pr-5"><a href="/projects" class="font-bold py-4 border-gray-300 dark:text-slate-100">Projects</a></p></li>
-                <li class="py-2 border-t dark:border-t-gray-400 w-full"><p class="float-right pr-5"><a href="/about.html" class="font-bold py-4 border-gray-300 dark:text-slate-100">About</a></p></li>
-            </ul>
-        </section>
-
-        <!-- Post header-->
-        <section class="md:w-6/12 md:mx-auto">
-            <div class="flex flex-col items-center">
-                <p class="text-gray-500 m-5">November 21, 2023</p>
-                <h1 class="font-extrabold text-2xl m-5 dark:text-slate-100">Stop mocking about: Event Dispatcher</h1>
-                <div class="flex flex-row gap-5 m-5">
-                    <div class="bg-slate-200 p-2 dark:bg-cyan-900">
-                        <span class="dark:text-gray-200">PHPUNIT</span>
+                    <nav class="hidden md:block md:basis-4/12 basis-1/4">
+                        <ul class="flex justify-center gap-12">
+                            <li><a href="/blog" class="font-saira text-xl font-semibold py-1 hover:border-b-2 border-gray-600 dark:text-gray-400">Blog</a></li>
+                            <li><a href="/projects" class="font-saira text-xl font-semibold py-1 hover:border-b-2 border-gray-600 dark:text-gray-400">Projects</a></li>
+                            <li><a href="/about" class="font-saira text-xl font-semibold py-1 hover:border-b-2 border-gray-600 dark:text-gray-400">About</a></li>
+                        </ul>
+                    </nav>
+                    <div class="basis-1/5 md:basis-4/12 pr-3 md:pr-0 border-r md:border-r-0 dark:border-r-gray-400">
+                        <ul class="flex justify-end items-center gap-8">
+                            <li>
+                                <button
+                                    id="theme-toggle"
+                                    type="button"
+                                    class="text-gray-600 dark:text-gray-400 hover:bg-slate-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2"
+                                >
+                                    <svg
+                                        id="theme-toggle-dark-icon"
+                                        class="w-5 h-5 hidden"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        id="theme-toggle-light-icon"
+                                        class="w-5 h-5 hidden"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="bg-slate-200 p-2 dark:bg-cyan-900">
-                        <span class="dark:text-gray-200">Stop Mocking About</span>
+                    <div class="basis-1/12 md:hidden lg:hidden">
+                        <div class="flex justify-end">
+                            <svg id="sm-menu-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold dark:text-gray-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <svg id="sm-cancel-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden dark:text-gray-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
+        </header>
+        <!-- Menu for SM and below devices -->
+        <section id="sm-menu" class="hidden w-full shadow-sm z-50 absolute bg-white md:hidden lg:hidden 2xl:hidden dark:bg-cyan-950">
+            <ul class="flex flex-col items-end">
+                <li class="py-2 border-b dark:border-b-gray-400 w-full"><a href="/" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-slate-100">Blog</a></li>
+                <li class="py-2 w-full"><a href="/projects" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-slate-100">Projects</a></p></li>
+                <li class="py-2 border-t dark:border-t-gray-400 w-full"><a href="/about.html" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-slate-100">About</a></p></li>
+            </ul>
         </section>
-        <!-- End of Post header-->
+        <!-- End of menu for SM and below devices -->
+
+        
 
         <!-- Main content -->
-        <section class="md:w-6/12 md:mx-auto">
+        <section class="container sm:pl-4 sm:pr-4 md:mx-auto mt-10">
             <!-- Main content container -->
-            <div class="flex flex-col px-5">
-                <picture>
-                    <img class="rounded-md w-full md:h-96 object-cover object-center" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="feature-image">
-                </picture>
+            <div class="md:w-7/12 md:mx-auto flex flex-col">
+                <div class="flex">
+                    <h1 class="font-sarabun text-2xl font-extrabold text-slate-900 dark:text-gray-300">
+                        I don't like mocks in unit testing (I use them, but don't like them).
+                    It often results in tests that only assure some specific method was called
+                    with certain parameters.
+                    </h1>
+                </div>
 
-                <!-- Main conent -->
-                <div class="md:w-10/12 md:mx-auto font-sans text-lg mt-5 dark:text-gray-200 font-medium">
+                <div class="flex justify-center gap-5 mt-8">
+                    <span class="text-base font-bold text-gray-600">PHPUNIT</span>
+                    <span class="text-base font-bold text-gray-600">PHPUNIT</span>
+                    <span class="text-base font-bold text-gray-600">PHPUNIT</span>
+                </div>
+
+                <div class="flex justify-center gap-5 mt-5">
+                    <span class="text-base font-normal text-gray-600">20.10.2013</span>
+                </div>
+
+                <div class="flex justify-center">
+                    <picture>
+                        <img class="rounded-md w-full md:h-96 object-cover object-center mt-10" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="feature-image">
+                    </picture>
+                </div>
+
+                <div id="content" class="mt-10 text-lg dark:text-gray-300">
                     <p>
                         I don't like mocks in unit testing (I use them, but don't like them).
                         It often results in tests that only assure some specific method was called
@@ -169,118 +165,218 @@
                         And it doesn't even listen to the event, or change the title.
                     </p>
                 </div>
-                <!-- Main content-->
+
+                <!-- Comments section -->
+                <div class="giscus mt-5">
+                </div>
+                <!-- End of comments section-->
             </div>
-            <!-- End of main content container-->
+
+            <div class="md:w-8/12 md:mx-auto flex flex-col mb-10">
+                <div class="flex flex-col bg-slate-50 dark:bg-daccara mt-10">
+                    <!-- Text container -->
+                    <div class="flex flex-row gap-3">
+                        <div>
+                            <div class="h-5 my-3 border-l-2 border-l-rose-500">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="h-5 mt-2">
+                                <h2 class="font-saira font-bold text-xl dark:text-gray-400">You might be interested in these too</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:grid md:grid-cols-3 md:gap-4 mx-4 mb-4">
+                        <article class="hover:bg-slate-100 dark:hover:bg-faccara">
+                            <a href="/page-details.html" class="">
+                                <div class="flex-col">
+                                    <picture>
+                                        <img class="w-full h-48 object-cover object-center mb-2" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="">
+                                    </picture>
+                                </div>
+                                <div class="flex flex-col px-4">
+                                    <div class="flex flex-col">
+                                        <h3 class="font-sarabun font-extrabold text-lg text-left dark:text-gray-300">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                                        <p class="text-base text-gray-900 dark:text-gray-400 line-clamp-4 mt-5">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-row p-5 gap-6 justify-center">
+                                        <div>
+                                            <p class="inline-flex gap-1">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="w-5 h-5 text-gray-500"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h15a3 3 0 01-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                    <path
+                                                        d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 01-3 0V6.75z"
+                                                    />
+                                                </svg>
+                                                <span class="text-sm font-normal text-gray-600">PHPUNIT</span>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="inline-flex gap-1">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="w-5 h-5 text-gray-500"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                                <span class="text-sm font-normal text-gray-600">4.12.2023</span>  
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="hover:bg-slate-100 dark:hover:bg-faccara">
+                            <a href="/page-details.html" class="">
+                                <div class="flex-col">
+                                    <picture>
+                                        <img class="w-full h-48 object-cover object-center mb-2" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="">
+                                    </picture>
+                                </div>
+                                <div class="flex flex-col px-4">
+                                    <div class="flex flex-col">
+                                        <h3 class="font-sarabun font-extrabold text-lg text-left dark:text-gray-300">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+    
+                                        <p class="text-base text-gray-900 dark:text-gray-400 line-clamp-4 mt-5">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-row p-5 gap-6 justify-center">
+                                        <div>
+                                            <p class="inline-flex gap-1">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="w-5 h-5 text-gray-500"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h15a3 3 0 01-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                    <path
+                                                        d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 01-3 0V6.75z"
+                                                    />
+                                                </svg>
+                                                <span class="text-sm font-normal text-gray-600">PHPUNIT</span>  
+                                            </p>
+                                        </div>
+    
+                                        <div>
+                                            <p class="inline-flex gap-1">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="w-5 h-5 text-gray-500"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                                <span class="text-sm font-normal text-gray-600">4.12.2023</span>  
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="hover:bg-slate-100 dark:hover:bg-faccara">
+                            <a href="/page-details.html" class="">
+                                <div class="flex-col">
+                                    <picture>
+                                        <img class="w-full h-48 object-cover object-center mb-2" src="/assets/img/stop-mocking-about-event-dispatcher.jpg" alt="">
+                                    </picture>
+                                </div>
+                                <div class="flex flex-col px-4">
+                                    <div class="flex flex-col">
+                                        <h3 class="font-sarabun font-extrabold text-lg text-left dark:text-gray-300">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+    
+                                        <p class="text-base text-gray-900 dark:text-gray-400 line-clamp-4 mt-5">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-row p-5 gap-6 justify-center">
+                                        <div>
+                                            <p class="inline-flex gap-1">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="w-5 h-5 text-gray-500"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h15a3 3 0 01-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                    <path
+                                                        d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 01-3 0V6.75z"
+                                                    />
+                                                </svg>
+                                                <span class="text-sm font-normal text-gray-600">PHPUNIT</span>
+                                            </p>
+                                        </div>
+    
+                                        <div>
+                                            <p class="inline-flex gap-1">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="w-5 h-5 text-gray-500"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"
+                                                        clip-rule="evenodd"
+                                                    />
+                                                </svg>
+                                                <span class="text-sm font-normal text-gray-600">4.12.2023</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- End of main content -->
 
-        <!-- Share plugin -->
-        <section class="md:w-6/12 md:mx-auto m-5 border-b-2 border-t-2 border-slate-200 py-9">
-            <div class="flex flex-col items-center space-y-5 text-slate-500">
-                <div>
-                    <h3 class="uppercase text-base font-bold dark:dark:text-gray-200">Share this article</h3>
-                </div>
-                <div>
-                    <div class="flex flex-row gap-8">
-                        <a href="" class="hover:text-slate-900 dark:hover:text-gray-200">
-                            <div class="flex flex-row gap-2">
-                                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
-                                </svg>
-                                <span>Twitter</span>
-                            </div>
-                        </a>
 
-                        <a href="" class="hover:text-slate-900 dark:hover:text-gray-200">
-                            <div class="flex flex-row gap-2">
-                                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"></path>
-                                </svg>
-                                <span>Facebook</span>
-                            </div>
-                        </a>
+        
 
-                        <a href="" class="hover:text-slate-900 dark:hover:text-gray-200">
-                            <div class="flex flex-row gap-2">
-                                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
-                                </svg>
-                                <span>LinkedIn</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End of share plugin -->
-
-        <!-- Comments section -->
-        <section class="md:w-6/12 md:mx-auto giscus mt-5 px-4 md:px-0">
-        </section>
-        <!-- End of comments section-->
-
-        <!-- Newsletter section -->
-        <section id="action" class="bg-cyan-900 p-5 mt-5">
-            <div class="md:w-9/12 md:mx-auto flex flex-col md:flex md:flex-row md:gap-3">
-                <div class="mb-5 md:basis-1/2">
-                    <h4 class="font-semibold text-xl text-slate-200">Want to know about future blog posts?</h4>
-                    <h4 class="font-semibold text-xl text-cyan-500">Then sign up for my newsletter!</h4>
-                </div>
-                <div class="mb-5 md:basis-1/2">
-                    <div>
-                        <input type="email" placeholder="Enter your email" class="w-3/4 p-2 rounded text-sm">
-                        <button class=" bg-sky-700 text-white p-2 rounded shadow-md text-sm">Notify Me</button>
-                    </div>
-                    <div class="mt-3">
-                        <p class="text-xs text-cyan-200">I'll only send mails if I actually have something to tell.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End of Newsletter section -->
-
-        <!-- Posts upselling -->
-        <section class="md:w-6/12 md:mx-auto mt-5">
-            <div class="flex flex-col items-center">
-                <h1 class="font-extrabold text-2xl mb-5 dark:text-slate-100">You might find this interesting too</h1>
-            </div>
-            <div class="flex flex-col items-center md:flex md:flex-row">
-                <article class="md:basis-1/3 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/page-details.html">
-                        <picture>
-                            <img class="w-full md:h-44 h-64 object-cover object-center rounded mb-2" src="/assets/img/heaps-and-heapsort-in-php.jpg" alt="">
-                        </picture>
-                        <h3 class="font-extrabold dark:text-slate-100">Stop mocking about: Event Dispatcher</h3>
-                        <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">PHPUNIT</h4>
-                        <p class="text-sm text-gray-600 dark:text-slate-400">How to replace your mocked event dispatcher with a real one, and why.</p>
-                    </a>
-                </article>
-
-                <article class="md:basis-1/3 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/page-details.html">
-                        <picture>
-                            <img class="w-full md:h-44 h-64 object-cover object-center rounded mb-2" src="/assets/img/middleware-pattern-in-php.webp" alt="">
-                        </picture>
-                        <h3 class="font-extrabold dark:text-slate-100">Stop mocking about: Event Dispatcher</h3>
-                        <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">PHPUNIT</h4>
-                        <p class="text-sm text-gray-600 dark:text-slate-400">How to replace your mocked event dispatcher with a real one, and why.</p>
-                    </a>
-                </article>
-
-                <article class="md:basis-1/3 p-4 hover:bg-slate-100 mb-4 dark:hover:bg-slate-900">
-                    <a href="/blog/post-1">
-                        <picture>
-                            <img class="w-full md:h-44 h-64 object-cover object-center rounded mb-2" src="/assets/img/visitor-pattern.jpg" alt="">
-                        </picture>
-                        <h3 class="font-extrabold dark:text-slate-100">Stop mocking about: Event Dispatcher</h3>
-                        <h4 class="font-extrabold text-xs text-gray-500 mb-4 dark:text-slate-400">PHPUNIT</h4>
-                        <p class="text-sm text-gray-600 dark:text-slate-400">How to replace your mocked event dispatcher with a real one, and why.</p>
-                    </a>
-                </article>
-            </div>
-        </section>
-        <!-- End of post upselling -->
 
         <footer class="bg-black p-5">
             <div class="flex flex-row justify-start">
