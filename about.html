@@ -19,7 +19,7 @@
             }
         </script>
     </head>
-    <body class="antialiased bg-white dark:bg-baccara scroll-smooth">
+    <body class="antialiased bg-white dark:bg-gray-900 scroll-smooth">
         <header class="py-4">
             <div class="container pl-4 pr-4 sm:pl-4 sm:pr-4 md:mx-auto">
                 <div class="md:w-8/12 md:mx-auto flex flex-row justify-between items-center">
@@ -28,9 +28,9 @@
                     </div>
                     <nav class="hidden md:block md:basis-4/12 basis-1/4">
                         <ul class="flex justify-center gap-12 font-saira text-xl font-semibold">
-                            <li><a href="/blog" class="py-1 hover:border-b-2 border-gray-900 dark:text-gray-200">Blog</a></li>
-                            <li><a href="/projects" class="py-1 hover:border-b-2 border-gray-900 dark:text-gray-200">Projects</a></li>
-                            <li><a href="/about" class="py-1 hover:border-b-2 border-gray-900 dark:text-gray-200">About</a></li>
+                            <li><a href="/blog" class="py-1 hover:border-b-2 hover:border-gray-900 dark:text-gray-200 dark:hover:border-gray-200">Blog</a></li>
+                            <li><a href="/projects" class="py-1 hover:border-b-2 border-gray-900 dark:text-gray-200 dark:hover:border-gray-200">Projects</a></li>
+                            <li><a href="/about" class="py-1 hover:border-b-2 border-gray-900 dark:text-gray-200 dark:hover:border-gray-200">About</a></li>
                         </ul>
                     </nav>
                     <div class="basis-1/5 md:basis-4/12 pr-3 md:pr-0 border-r md:border-r-0 dark:border-r-gray-400">
@@ -71,10 +71,10 @@
                     </div>
                     <div class="basis-1/12 md:hidden lg:hidden">
                         <div class="flex justify-end">
-                            <svg id="sm-menu-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold dark:text-gray-400">
+                            <svg id="sm-menu-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold text-gray-600 dark:text-gray-200">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
-                            <svg id="sm-cancel-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden dark:text-gray-400">
+                            <svg id="sm-cancel-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden text-gray-600 dark:text-gray-200">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </div>
@@ -83,23 +83,23 @@
             </div>
         </header>
         <!-- Menu for SM and below devices -->
-        <section id="sm-menu" class="hidden w-full shadow-sm z-50 absolute bg-white md:hidden lg:hidden 2xl:hidden dark:bg-cyan-950">
+        <section id="sm-menu" class="hidden w-full shadow-sm z-50 absolute bg-white md:hidden lg:hidden 2xl:hidden dark:bg-gray-900">
             <ul class="flex flex-col items-end">
-                <li class="py-2 border-b dark:border-b-gray-400 w-full"><a href="/" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-slate-100">Blog</a></li>
-                <li class="py-2 w-full"><a href="/projects" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-slate-100">Projects</a></p></li>
-                <li class="py-2 border-t dark:border-t-gray-400 w-full"><a href="/about.html" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-slate-100">About</a></p></li>
+                <li class="py-2 border-b dark:border-b-gray-400 w-full"><a href="/" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-gray-200">Blog</a></li>
+                <li class="py-2 w-full"><a href="/projects" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-gray-200">Projects</a></p></li>
+                <li class="py-2 border-t dark:border-t-gray-400 w-full"><a href="/about.html" class="font-saira font-bold float-right pr-5 py-2 border-gray-300 dark:text-gray-200">About</a></p></li>
             </ul>
         </section>
         <!-- End of menu for SM and below devices -->
 
-        <div class="container flex flex-col px-4 mx-auto md:w-8/12">
+        <div class="container flex flex-col px-4 mx-auto md:w-8/12 mb-5 mt-5">
             <div class="flex flex-col md:flex-row gap-4 mb-4">
                 <div class="flex flex-col md:w-4/12">
                     <div class="flex flex-col items-center">
                         <img class="object-cover object-center shadow-lg w-60 h-80 md:w-96 md:h-96" src="/assets/img/img.JPG" alt="" >
                     </div>
                 </div>
-                <div class="flex flex-col md:w-8/12 bg-slate-50">
+                <div class="flex flex-col md:w-8/12 bg-slate-50 dark:bg-gray-950">
                     <div class="flex flex-row gap-3">
                         <div>
                             <div class="h-5 my-3 border-l-2 border-l-rose-500">
@@ -107,12 +107,12 @@
                         </div>
                         <div>
                             <div class="h-5 mt-2">
-                                <h2 class="font-saira font-bold text-xl dark:text-gray-400">About Me</h2>
+                                <h2 class="font-saira font-bold text-xl dark:text-gray-200">About Me</h2>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-col mx-4 mb-4">
+                    <div class="flex flex-col mx-4 mb-4 dark:text-gray-300">
                         <p>
                             I am a seasoned software developer with a passion for crafting elegant
                             and effective solutions, I bring over 7 years of experience in building
@@ -142,7 +142,7 @@
 
             <div class="flex flex-col md:flex-row gap-4">
                 <div class="flex flex-col md:w-4/12">
-                    <div class="flex flex-col w-12/12 bg-slate-50 mb-4">
+                    <div class="flex flex-col w-12/12 bg-slate-50 dark:bg-gray-950 mb-4">
                         <div class="flex flex-row gap-3">
                             <div class="flex flex-col">
                                 <div class="h-5 my-3 border-l-2 border-l-rose-500">
@@ -150,12 +150,12 @@
                             </div>
                             <div class="flex flex-col">
                                 <div class="h-5 mt-2">
-                                    <h2 class="font-saira font-bold text-xl dark:text-gray-400">Contact</h2>
+                                    <h2 class="font-saira font-bold text-xl dark:text-gray-200">Contact</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-col mx-2 mb-4">
-                            <div class="flex flex-row text-gray-500 hover:text-gray-800 mb-1 gap-1">
+                            <div class="flex flex-row text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300 mb-1 gap-1">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
@@ -173,7 +173,7 @@
                                 </svg>
                                 <span class="text-sm font-normal"><a href="mailto:ntimobedyeboah@gmail.com" target="_blank">ntimobedyeboah@gmail.com</a></span>
                             </div>
-                            <div class="flex flex-row text-gray-500 hover:text-gray-800 mb-1 gap-1">
+                            <div class="flex flex-row text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300 mb-1 gap-1">
                                 <svg
                                         fill="currentColor"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +188,7 @@
                                 </svg>
                                 <span class="text-sm font-normal"><a href="https://www.linkedin.com/in/ntimyeboah/" target="_blank">ntimyeboah</a></span>
                             </div>
-                            <div class="flex flex-row text-gray-500 hover:text-gray-800 mb-1 gap-1">
+                            <div class="flex flex-row text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300 mb-1 gap-1">
                                 <svg
                                     fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +202,7 @@
                                 </svg>
                                 <span class="text-sm font-normal"><a href="https://github.com/NtimYeboah" target="_blank">@NtimYeboah</a></span>
                             </div>
-                            <div class="flex flex-row text-gray-500 hover:text-gray-800 gap-1">
+                            <div class="flex flex-row text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300 gap-1">
                                 <svg
                                     fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -219,7 +219,7 @@
                         </div>
 
                     </div>
-                    <div class="flex flex-col w-12/12 bg-slate-50">
+                    <div class="flex flex-col w-12/12 bg-slate-50 dark:bg-gray-950">
                         <div class="flex flex-row gap-3">
                             <div class="flex flex-col">
                                 <div class="h-5 my-3 border-l-2 border-l-rose-500">
@@ -227,39 +227,39 @@
                             </div>
                             <div class="flex flex-col">
                                 <div class="h-5 mt-2">
-                                    <h2 class="font-saira font-bold text-xl dark:text-gray-400">Education and Certification</h2>
+                                    <h2 class="font-saira font-bold text-xl dark:text-gray-200">Education and Certification</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-col mx-4 mb-4 font-sarabun">
                             <div class="flex flex-col mb-5">
                                 <h4>
-                                    <span class="font-semibold">B.Sc Computer Science</span>
+                                    <span class="font-semibold dark:text-gray-300">B.Sc Computer Science</span>
                                 </h4>
                                 <h4>
-                                    <span class="text-gray-500 font-semibold">University for Development Studies</span>
+                                    <span class="text-gray-500 font-semibold dark:text-gray-400">University for Development Studies</span>
                                 </h4>
-                                <h6 class="text-sm text-gray-500">August 2009 - July 2013</h6>
+                                <h6 class="text-sm text-gray-500 dark:text-gray-400">August 2009 - July 2013</h6>
                             </div>
                             <div class="flex flex-col mb-5">
                                 <h4>
-                                    <span class="font-semibold">The Data Scientist's Toolbox</span>
+                                    <span class="font-semibold dark:text-gray-300">The Data Scientist's Toolbox</span>
                                 </h4>
                                 <h4>
-                                    <span class="text-gray-500 font-semibold">Coursera - John Hopkins University</span>
+                                    <span class="text-gray-500 font-semibold dark:text-gray-400">Coursera - John Hopkins University</span>
                                 </h4>
-                                <h6 class="text-sm text-gray-500">February 2016</h6>
+                                <h6 class="text-sm text-gray-500 dark:text-gray-400">February 2016</h6>
                             </div>
                             <div class="flex flex-col">
                                 <h4>
-                                    <span class="font-semibold">Certified Laravel Developer</span>
+                                    <span class="font-semibold dark:text-gray-300">Certified Laravel Developer</span>
                                 </h4>
-                                <h6 class="text-sm text-gray-500">September 2018</h6>
+                                <h6 class="text-sm text-gray-500 dark:text-gray-400">September 2018</h6>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col md:w-8/12 bg-slate-50">
+                <div class="flex flex-col md:w-8/12 bg-slate-50 dark:bg-gray-950">
                     <div class="flex flex-row gap-3">
                         <div>
                             <div class="h-5 my-3 border-l-2 border-l-rose-500">
@@ -267,7 +267,7 @@
                         </div>
                         <div>
                             <div class="h-5 mt-2">
-                                <h2 class="font-saira font-bold text-xl dark:text-gray-400">Work Experience</h2>
+                                <h2 class="font-saira font-bold text-xl dark:text-gray-200">Work Experience</h2>
                             </div>
                         </div>
                     </div>
@@ -275,14 +275,14 @@
                         <div class="flex flex-col mb-5">
                             <div class="flex flex-col font-sarabun">
                                 <h4>
-                                    <a href="https://64robots.com/" target="_blank" class="font-semibold underline">64 Robots, Baltimore US</a>
-                                    <span>-</span>
-                                    <span class="text-gray-500 font-semibold">Senior Backend Developer</span>
+                                    <a href="https://64robots.com/" target="_blank" class="font-semibold underline dark:text-gray-300">64 Robots, Baltimore US</a>
+                                    <span class="dark:text-gray-300">-</span>
+                                    <span class="text-gray-500 font-semibold dark:text-gray-400">Senior Backend Developer</span>
                                 </h4>
-                                <h6 class="text-sm text-gray-500">September 2018 - Present</h6>
+                                <h6 class="text-sm text-gray-500 dark:text-gray-400">September 2018 - Present</h6>
                             </div>
                             <div class="flex pl-5 pt-2">
-                                <ul class="list-outside list-disc">
+                                <ul class="list-outside list-disc dark:text-gray-300">
                                     <li>
                                         Helped the team build and deployed to production both the API endpoints and
                                         admin panel for <a class="underline hover:text-rose-500" href="https://www.boomboxgifts.com/" target="_blank" class="underline">Boombox,</a> gift giver's collaboration application.
@@ -309,7 +309,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="flex flex-row text-sm overflow-auto text-gray-500 gap-2 underline">
+                            <div class="flex flex-row text-sm overflow-auto text-gray-500 dark:text-gray-400 gap-2 underline">
                                 <a href="https://laravel.com/" target="_blank">Laravel</a>
                                 <a href="https://www.mysql.com/" target="_blank">MySQL</a>
                                 <a href="https://redis.io/" target="_blank">Redis</a>
@@ -327,14 +327,14 @@
                         <div class="flex flex-col mb-5">
                             <div class="flex flex-col font-sarabun">
                                 <h4>
-                                    <a href="https://kudobuzz.com/" target="_blank" class="font-semibold underline">Kudobuzz, Accra Ghana</a>
+                                    <a href="https://kudobuzz.com/" target="_blank" class="font-semibold underline dark:text-gray-300">Kudobuzz, Accra Ghana</a>
                                     <span>-</span>
-                                    <span class="text-gray-500 font-semibold">Full-Stack Developer</span>
+                                    <span class="text-gray-500 font-semibold dark:text-gray-400">Full-Stack Developer</span>
                                 </h4>
-                                <h6 class="text-sm text-gray-500">September 2017 - July 2018</h6>
+                                <h6 class="text-sm text-gray-500 dark:text-gray-400">September 2017 - July 2018</h6>
                             </div>
                             <div class="pl-5 pt-2">
-                                <ul class="list-outside list-disc">
+                                <ul class="list-outside list-disc dark:text-gray-300">
                                     <li>
                                         Led the development of the merchant dashboard for the latest version of <a class="underline hover:text-rose-500" href="https://kudobuzz.com/" target="_blank">Kudobuzz.</a>
                                     </li>
@@ -346,7 +346,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="flex flex-row text-sm text-gray-500 gap-2 underline">
+                            <div class="flex flex-row text-sm text-gray-500 gap-2 underline dark:text-gray-400">
                                 <a href="https://www.php.net/" target="_blank">PHP</a>
                                 <a href="https://wordpress.org/" target="_blank">Wordpress</a>
                                 <a href="https://jquery.com/" target="_blank">JQuery</a>
@@ -356,14 +356,14 @@
                         <div class="flex flex-col mb-5">
                             <div class="flex flex-col font-sarabun">
                                 <h4>
-                                    <a href="https://callenssolutions.com/" target="_blank" class="font-semibold underline">Callens Solutions, Accra Ghana</a>
+                                    <a href="https://callenssolutions.com/" target="_blank" class="font-semibold underline dark:text-gray-300">Callens Solutions, Accra Ghana</a>
                                     <span>-</span>
-                                    <span class="text-gray-500 font-semibold">Software Developer</span>
+                                    <span class="text-gray-500 font-semibold dark:text-gray-400">Software Developer</span>
                                 </h4>
-                                <h6 class="text-sm text-gray-500">May 2016 - August 2017</h6>
+                                <h6 class="text-sm text-gray-500 dark:text-gray-400">May 2016 - August 2017</h6>
                             </div>
                             <div class="pl-5 pt-2">
-                                <ul class="list-outside list-disc">
+                                <ul class="list-outside list-disc dark:text-gray-300">
                                     <li>
                                         Led the development of CRM software for a client that deals in hire purchase of electronic products.
                                     </li>
@@ -376,7 +376,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="flex flex-row text-sm text-gray-500 gap-2 underline">
+                            <div class="flex flex-row text-sm text-gray-500 gap-2 underline dark:text-gray-400">
                                 <a href="https://www.php.net/" target="_blank">PHP</a>
                                 <a href="https://laravel.com/" target="_blank">Laravel</a>
                                 <a href="https://www.mysql.com/" target="_blank">MySQL</a>
@@ -387,20 +387,20 @@
                         <div class="flex flex-col mb-5">
                             <div class="flex flex-col font-sarabun">
                                 <h4>
-                                    <a href="#" target="_blank" class="font-semibold underline">Yame Service, Tema Ghana</a>
+                                    <a href="#" target="_blank" class="font-semibold underline dark:text-gray-300">Yame Service, Tema Ghana</a>
                                     <span>-</span>
-                                    <span class="text-gray-500 font-semibold">Mobile Applications Developer</span>
+                                    <span class="text-gray-500 font-semibold dark:text-gray-400">Mobile Applications Developer</span>
                                 </h4>
-                                <h6 class="text-sm text-gray-500">November 2015 - March 2016</h6>
+                                <h6 class="text-sm text-gray-500 dark:text-gray-400">November 2015 - March 2016</h6>
                             </div>
                             <div class="pl-5 pt-2">
-                                <ul class="list-outside list-disc">
+                                <ul class="list-outside list-disc dark:text-gray-300">
                                     <li>
                                         Built utility payments solutions on mobile using the Ionic Framework.
                                     </li>
                                 </ul>
                             </div>
-                            <div class="flex flex-row text-sm text-gray-500 gap-2 underline">
+                            <div class="flex flex-row text-sm text-gray-500 gap-2 underline dark:text-gray-400">
                                 <a href="https://www.javascript.com/" target="_blank">JavaScript</a>
                                 <a href="https://angularjs.org/" target="_blank">AngularJS</a>
                                 <a href="https://ionicframework.com/" target="_blank">Ionic Framework</a>
@@ -410,20 +410,20 @@
                         <div class="flex flex-col mb-5">
                             <div class="flex flex-col font-sarabun">
                                 <h4>
-                                    <a href="#" target="_blank" class="font-semibold underline">Coursedub, Accra Ghana</a>
+                                    <a href="#" target="_blank" class="font-semibold underline dark:text-gray-300">Coursedub, Accra Ghana</a>
                                     <span>-</span>
-                                    <span class="text-gray-500 font-semibold">Software Developer</span>
+                                    <span class="text-gray-500 font-semibold dark:text-gray-400">Software Developer</span>
                                 </h4>
-                                <h6 class="text-sm text-gray-500">August 2014 - Oct 2015</h6>
+                                <h6 class="text-sm text-gray-500 dark:text-gray-400">August 2014 - Oct 2015</h6>
                             </div>
                             <div class="pl-5 pt-2">
-                                <ul class="list-outside list-disc">
+                                <ul class="list-outside list-disc dark:text-gray-300">
                                     <li>
                                         Built an e-learning web application to connect teachers and students after lectures.
                                     </li>
                                 </ul>
                             </div>
-                            <div class="flex flex-row text-sm text-gray-500 gap-2 underline">
+                            <div class="flex flex-row text-sm text-gray-500 gap-2 underline dark:text-gray-400">
                                 <a href="https://www.javascript.com/" target="_blank">JavaScript</a>
                                 <a href="https://nodejs.org/en" target="_blank">NodeJS</a>
                                 <a href="https://expressjs.com/" target="_blank">ExpressJS</a>
