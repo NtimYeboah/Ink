@@ -9,6 +9,8 @@ module.exports = {
     'page-details.html',
     'about.html',
     'projects.html',
+    'search.html',
+    'index2.html',
   ],
   theme: {
     extend: {

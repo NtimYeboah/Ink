@@ -38,3 +38,10 @@ themeToggleBtn.addEventListener('click', function() {
     }
     
 });
+
+var smSearchDiv = document.getElementById('sm-search');
+var smSearchToggleIcon = document.getElementById('search-icon');
+
+smSearchToggleIcon.addEventListener('click', function (e) {
+    smSearchDiv.classList.toggle('hidden');
+});
