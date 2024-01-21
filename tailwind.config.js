@@ -21,11 +21,9 @@ module.exports = {
         'saira': ['"Saira Condensed"', ...defaultTheme.fontFamily.serif],
         'sarabun': ['Sarabun', ...defaultTheme.fontFamily.sans]
       },
-      colors: {
-        'baccara': '#140006',
-        'daccara': '#0A0003',
-        'faccara': '#050002',
-      }
+      backgroundSize: {
+        '50%': '50%',
+      },
     },
   },
   plugins: [],
