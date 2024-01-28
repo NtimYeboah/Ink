@@ -6,11 +6,12 @@ module.exports = {
   darkMode: 'class',
   content: [
     'index.html',
+    'index2.html',
+    'index3.html',
     'page-details.html',
     'about.html',
     'projects.html',
     'search.html',
-    'index2.html',
   ],
   theme: {
     extend: {
