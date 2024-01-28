@@ -35,7 +35,7 @@
                     </nav>
                     <div class="basis-1/5 md:basis-4/12 pr-3 md:pr-0 border-r md:border-r-0 dark:border-r-gray-400">
                         <ul class="flex justify-end items-center gap-8">
-                            <li>
+                            <li class="md:hidden">
                                 <button
                                     id="search-icon"
                                     type="button"
@@ -91,7 +91,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="basis-1/12 md:hidden lg:hidden">
+                    <div class="basis-1/12 md:hidden lg:hidden pl-4 md:pl-0">
                         <div class="flex justify-end">
                             <svg id="sm-menu-icon" onClick="onToggleMenuIcon(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold text-gray-600 dark:text-gray-200">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -115,6 +115,35 @@
         <!-- End of menu for SM and below devices -->
 
         <div class="container flex flex-col px-4 mx-auto md:w-8/12 mb-5 mt-5">
+            <div class="flex flex-col">
+                <div class="flex flex-col md:w-8/12">
+                    <!-- Search for sm screens -->
+                    <div id="sm-search" class="hidden flex-col w-12/12 bg-slate-50 dark:bg-gray-950 mb-4">
+                        <div class="flex flex-row gap-3">
+                            <div class="flex flex-col">
+                                <div class="h-5 my-3 border-l-2 border-l-rose-500">
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="h-5 mt-2">
+                                    <h2 class="font-saira font-bold text-xl dark:text-gray-200">Search</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col ml-4 mb-4 pr-4">
+                            <div class="flex flex-row text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300 mb-1 gap-1">
+                                <form action="" class="border bg-white">
+                                    <input type="text" placeholder="Search" class="pl-2 pb-1 focus:outline-none w-48">
+                                    <button class="font-medium2 py-1 px-2 bg-slate-50 border-l">
+                                        Search
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of search for sm screens -->
+                </div>
+            </div>
             <div class="flex flex-col">
                 <!-- Featured Article -->
                 <div class="flex flex-col mb-5 bg-slate-50 dark:bg-gray-950">
