@@ -12,6 +12,7 @@ module.exports = {
     'about.html',
     'projects.html',
     'search.html',
+    'articles.html',
   ],
   theme: {
     extend: {
