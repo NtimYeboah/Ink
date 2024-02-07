@@ -45,27 +45,4 @@
     smSearchToggleIcon.addEventListener('click', function (e) {
         smSearchDiv.classList.toggle('hidden');
     });
-
-    var onToggleMenuIcon = function (element) {
-        showMenu = element.id === 'sm-menu-icon' ? true : false;
-        element.classList.add('hidden')
-
-        menuForSmallScreens = document.querySelector('#sm-menu');
-
-        if (showMenu) {
-            cancelMenuIcon = document.querySelector('#sm-cancel-icon');
-            cancelMenuIcon.classList.remove('hidden')
-
-            menuForSmallScreens.classList.remove('hidden')
-        } else {
-            showMenuIcon = document.querySelector('#sm-menu-icon');
-            showMenuIcon.classList.remove('hidden')
-
-            menuForSmallScreens.classList.add('hidden')
-        }
-    }
-
-    return {
-        onToggleMenuIcon: onToggleMenuIcon
-    }
 })()
