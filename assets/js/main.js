@@ -64,4 +64,8 @@
             menuForSmallScreens.classList.add('hidden')
         }
     }
+
+    return {
+        onToggleMenuIcon: onToggleMenuIcon
+    }
 })()
