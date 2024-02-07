@@ -46,7 +46,7 @@
         smSearchDiv.classList.toggle('hidden');
     });
 
-    function onToggleMenuIcon(element) {
+    var onToggleMenuIcon = function (element) {
         showMenu = element.id === 'sm-menu-icon' ? true : false;
         element.classList.add('hidden')
 
