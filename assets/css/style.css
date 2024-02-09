@@ -1462,13 +1462,13 @@ select {
 @font-face {
   font-family: 'Saira Condensed';
 
-  src: url(/ntim.dev-theme/assets/fonts/SairaCondensed-Regular.ttf);
+  src: url(/assets/fonts/SairaCondensed-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Sarabun';
 
-  src: url(/ntim.dev-theme/assets/fonts/Sarabun-Regular.ttf);
+  src: url(/assets/fonts/Sarabun-Regular.ttf);
 }
 
 .hover\:border-b-2:hover {
@@ -1477,11 +1477,6 @@ select {
 
 .hover\:border-b-4:hover {
   border-bottom-width: 4px;
-}
-
-.hover\:border-gray-900:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(17 24 39 / var(--tw-border-opacity));
 }
 
 .hover\:bg-slate-100:hover {
