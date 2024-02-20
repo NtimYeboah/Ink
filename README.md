@@ -1,6 +1,8 @@
 # Ink
 ## _HTML 5 theme crafted to showcase your writing!_
 
+### View it you'll love it! [https://ntimyeboah.github.io/Ink/](https://ntimyeboah.github.io/Ink/)
+
 Captivate your readers with Ink, an HTML 5 theme crafted to showcase your writing. Whether you're a seasoned author or just starting out, Ink's three unique homepage layouts provide the perfect platform to share your stories. This responsive theme seamlessly adapts to any device, ensuring your words reach readers on mobile, tablets, and desktops. And for added comfort, Ink offers both light and dark mode options, making reading a pleasure at any time of day. Let Ink help your writing shine!
 
 - Pixel perfect modern design crafted to make your writing stand out.
