@@ -1,7 +1,7 @@
 {
-  "name": "ntim.dev-theme",
+  "name": "ink",
   "version": "1.0.0",
-  "description": "Tailwindcss theme for ntim.dev blog website",
+  "description": "Ink theme for building blogs",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
