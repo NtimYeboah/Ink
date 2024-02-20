@@ -11,13 +11,27 @@ Captivate your readers with Ink, an HTML 5 theme crafted to showcase your writin
 - Light and dark mode options.
 - With its MIT license, this theme offers perpetual freedom to use, modify, and share.
 
+## Pages
+
+This theme comes with the following pages;
+
+- 3 unique homepage layout
+- Detail article page
+- All articles page
+- Projects page
+- About page
+
 ## How to setup locally
 
 - Download the zip or clone this repository by running
-`git clone https://github.com/NtimYeboah/Ink.git`
+```sh
+git clone https://github.com/NtimYeboah/Ink.git
+```
 - Install [Node](https://nodejs.org/en). This is tested for version 18 and above.
 - Navigate to the root and install all the packages by running
-`npm install`
+```sh
+npm install
+```
 - Run `npm dev` to start Vite and preview your website.
 
 ## Extending theme
