@@ -28,11 +28,12 @@ This theme comes with the following pages;
 git clone https://github.com/NtimYeboah/Ink.git
 ```
 - Install [Node](https://nodejs.org/en). This is tested for version 18 and above.
+- Install [PNPM](https://pnpm.io/installation). This is an alternative for NPM.
 - Navigate to the root and install all the packages by running
 ```sh
-npm install
+pnpm install
 ```
-- Run `npm dev` to start Vite and preview your website.
+- Run `pnpm dev` to start Vite and preview your website.
 
 ## Extending theme
 This theme was built with [TailwindCSS](https://tailwindcss.com/). The configuration is `tailwind.config.js` where you can customize the settings.
